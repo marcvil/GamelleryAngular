@@ -1,0 +1,74 @@
+
+<router-outlet></router-outlet>
+<table class="table table-sm table-striped">
+  <tr><th colspan="2" class="bg-info">Movie</th></tr>
+
+  <tr>
+  <th>Games</th>
+</tr>
+<tr>
+  <br>
+  <tr>
+  <td>{{game?.gameId  || 'Loading Data..'}}</td>
+</tr>
+<tr>
+  <br>
+  <td>{{game?.gameName  || 'Loading Data..'}}</td>
+</tr>
+<tr>
+  <br>
+  <td>{{game?.gameDescription  || 'Loading Data..'}}</td>
+</tr>
+
+  <br>
+  <tr>
+  <td>{{game?.gameId  || 'Loading Data..'}}</td>
+  <br>
+  </tr>
+  <tr>
+
+    <br>
+
+  <th>Genre</th>
+  <br>
+  <td>{{game?.genre.genreName || 'Loading Data..'}}</td>
+  <br>
+  <td>{{game?.genre.genreId || 'Loading Data..'}}</td>
+  <br>
+  </tr>
+
+  <tr>
+    <th>GamesPlatform</th>
+	<td>
+    <ul>
+      <li *ngFor="let items of game?.gamesPlatforms" >
+        {{ items.platform.platformName }}
+        <br>
+      </li>
+    </ul>
+    </td>
+  </tr>
+
+  <tr>
+    <th>Images</th>
+  <td>
+    <ul>
+      <li *ngFor="let items of game?.images" >
+        {{ items.imageId }}
+        <br>
+        {{ items.imgName }}
+        <br>
+        {{ items.imgDescription }}
+        <br>
+        {{ items.imgUrl}}
+      </li>
+    </ul>
+    </td>
+  </tr>
+
+
+
+</table>
+
+
+
