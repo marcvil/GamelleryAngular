@@ -1,7 +1,7 @@
 
 export interface IGenre {
 
-  genreName :string;
-  genreId : number;
+  genreName? :string;
+  genreId? : number;
 
 }

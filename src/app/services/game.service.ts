@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { IGame } from '../interfaces/game';
 import { Observable } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
+
+
 @Injectable({providedIn: 'root'})
 export class GameService {
   constructor(private http: HttpClient) { }
