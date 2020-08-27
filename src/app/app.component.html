@@ -1,5 +1,7 @@
-
+<app-navbar></app-navbar>
 <router-outlet></router-outlet>
+
+<!--
 <table class="table table-sm table-striped">
   <tr><th colspan="2" class="bg-info">Movie</th></tr>
 
@@ -65,8 +67,22 @@
 </table>
 
 
+
+
+
 <button (click)="clickFunction()">Click Me</button>
 <img id="myimage" [src]='imagefinal' />
 
+<div>
+  <ul>
+    <li *ngFor="let item of imagefinals">
+      <img id="myimage" [src]='item' />
 
+
+</li>
+
+  </ul>
+</div>
+
+-->
 

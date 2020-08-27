@@ -4,11 +4,12 @@ import { Game } from "./Models/game.model";
 import { IGame } from "./interfaces/game";
 import { ApiService } from './api.service';
 
-import { DomSanitizer } from '@angular/platform-browser';
+import { DomSanitizer,SafeUrl } from '@angular/platform-browser';
 import { Observable } from 'rxjs';
 import { GameService } from './services/game.service';
 import { ImageService } from './services/image.service';
 import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-root',
@@ -23,26 +24,31 @@ export class AppComponent implements OnInit {
   hi:string;
   img: Blob;
 
+  Items : any[];
   imagefinal: any;
+  temp: any;
+  imagefinals: SafeUrl[];
   constructor(private http :HttpClient, public gameService : GameService,public imageService : ImageService, private sanitizer: DomSanitizer)
   {
 
-    this.getImage();
+
   }
 
 
 
   ngOnInit(){
     this.getgame();
-
+    this.getImage(2);
 
 
   }
 
-  getImage(){
-    this.imageService.getImage(1).subscribe((resp :any )=> {
-      console.log(resp);
-      this.game = resp;
+  getImage(id :number){
+    this.imageService.getImage(id).subscribe((blob :any )=> {
+
+
+      let objectURL = URL.createObjectURL(blob);
+      this.imagefinal = this.sanitizer.bypassSecurityTrustUrl(objectURL);
     });
   }
 
@@ -64,7 +70,25 @@ export class AppComponent implements OnInit {
   )
   }
 
-}
+
+  clickFunctionAllImages(){
+    this.imageService.getAllImages().subscribe((blob :any )=> {
+      this.Items= JSON.parse(blob);
+      for (let i = 0; i < 3; i++){
+
+        console.log(this.Items[i] ,i);
+
+      };
+        });
+
+      };
+
+
+      }
+
+
+
+
 
 
 

@@ -1,0 +1,25 @@
+.carousel-item{
+
+  height: 100vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background: rgb(17, 17, 17);
+}
+
+.carousel-caption {
+  bottom: 220px;
+}
+
+.background{
+  background: rgb(17, 17, 17);
+  display: flex;
+
+}
+
+.cardspace{
+  margin: 20px;
+  background: rgb(17, 17, 17);
+}
+

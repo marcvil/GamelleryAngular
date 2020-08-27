@@ -1,0 +1,31 @@
+:root
+{
+    --background-color:rgb(17, 17, 17);
+
+    --background: url('/src/assets/control.png') ;
+
+    --MontserratFont: Montserrat-Regular;
+    --font-light-color: white;
+    --font-size1: 24px;
+    --font-size2: 12px;
+    --font-size3: 9px;
+
+}
+
+.title{
+  margin-top: 5px;
+  color: white;
+
+  font-size: 24px;
+}
+a.nav-link .but{
+  color: white;
+  font-size: 24px;
+}
+.nav-item{
+  margin-top: 5px;
+  color: white;
+
+  font-size: 16px;
+}
+
