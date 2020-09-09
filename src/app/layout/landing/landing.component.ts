@@ -2,8 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { ImageService } from '../../services/image.service';
 import { DomSanitizer,SafeUrl, SafeResourceUrl } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
-import { Blob } from "./../../blob.model";
+
 import { Observable } from 'rxjs';
+
+import { IImageFile } from "./../../interfaces/imageFile";
+import { IImage } from 'src/app/interfaces/image';
+
 
 @Component({
   selector: 'app-landing',
@@ -12,64 +16,77 @@ import { Observable } from 'rxjs';
 })
 export class LandingComponent implements OnInit {
 
-  public urlS: SafeResourceUrl;
-  imageToShow : any;
-  image1 : SafeResourceUrl;
+  img: IImage;
+
+  image1?: SafeResourceUrl;
   image2 : SafeResourceUrl;
   image3 : SafeResourceUrl;
-  result: SafeUrl;
-  isImageLoading:boolean;
+
+  isloaded:boolean;
+
 
 
   constructor(private http :HttpClient,public imageService : ImageService, private sanitizer: DomSanitizer) { }
 
   ngOnInit()
    {
-
-
-    this.image1 = this.getImage(1);
-    console.log(this.getImage(1));
-
-    }
-
-
-
-    getImagedata(): Observable<any>{
+     this.isloaded=false;
+        this.getimg();
 
 
     }
 
-    getImage(id :number) :Promise<SafeUrl>  {
-
-     this.imageService.getImage(id).subscribe((blob : any )=> {
-
-
-       let objectURL = URL.createObjectURL(blob);
-       result =this.sanitizer.bypassSecurityTrustUrl(objectURL);
-return result;
-      });
 
 
 
-      /*
+    getImage1(id :number)   {
+
       this.imageService.getImage(id).subscribe((blob :any )=> {
 
+
         let objectURL = URL.createObjectURL(blob);
-        this.imageToShow = this.sanitizer.bypassSecurityTrustResourceUrl(objectURL);
-
-        if( this.imageToShow != null){
-          return this.imageToShow;
-        }
-        else{
-          return null;
-        }
-
-
+        this.image1 = this.sanitizer.bypassSecurityTrustUrl(objectURL);
+        console.log(this.image1);
       });
-      return null;
 
-      */
+
     }
+    getImage2(id :number)   {
+
+      this.imageService.getImage(id).subscribe((blob :any )=> {
+
+
+        let objectURL = URL.createObjectURL(blob);
+        this.image2= this.sanitizer.bypassSecurityTrustUrl(objectURL);
+        console.log(this.image2);
+      });
+
+
+    }
+    getImage3(id :number)   {
+
+      this.imageService.getImage(id).subscribe((blob :any )=> {
+
+
+        let objectURL = URL.createObjectURL(blob);
+        this.image3 = this.sanitizer.bypassSecurityTrustUrl(objectURL);
+        console.log(this.image3);
+      });
+
+
+    }
+
+    getimg() {
+     this.imageService.getImageFiles2(3)
+      .subscribe((resp :IImage )=> {
+
+        this.img = resp;
+        console.log(this.img);
+        this.isloaded=true;
+      })
+    }
+
+
 
   }
 

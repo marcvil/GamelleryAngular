@@ -1,14 +1,8 @@
-export class Blob{
 
-  constructor(
+export interface IImageFile {
+
       fileContents : string,
       contentType :string,
       fileDownloadName : string,
       enableRangeProcessing : boolean
-
-    ) { }
-
-
-
-
 }

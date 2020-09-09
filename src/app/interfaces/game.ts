@@ -1,6 +1,6 @@
-import { IGenre} from "../interfaces/genre";
+import { IGenre} from "./genre";
 import { IGamesPlatforms} from "./gamesplatforms";
-import { IImage } from "../interfaces/image";
+import { IImage } from "./image";
 
 
 export interface IGame {
