@@ -34,8 +34,8 @@ export class ImageService {
 
         };
 
-    getAllImages(): Observable<any> {
-      return this.http.get<Observable<any>>("https://localhost:44320/api/Images", {observe: 'body', responseType: 'json'})
+    getAllImages(): Observable<IImage[]> {
+      return this.http.get<IImage[]>("https://localhost:44320/api/Images")
       };
 }
 

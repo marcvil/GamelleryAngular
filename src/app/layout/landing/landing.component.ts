@@ -17,7 +17,9 @@ import { IImage } from 'src/app/interfaces/image';
 export class LandingComponent implements OnInit {
 
   img: IImage;
-
+  img2: IImage;
+  img3: IImage;
+  imgArray :IImage[];
   image1?: SafeResourceUrl;
   image2 : SafeResourceUrl;
   image3 : SafeResourceUrl;
@@ -30,8 +32,9 @@ export class LandingComponent implements OnInit {
 
   ngOnInit()
    {
-     this.isloaded=false;
-        this.getimg();
+
+        this.getAllimg();
+
 
 
     }
@@ -77,14 +80,42 @@ export class LandingComponent implements OnInit {
     }
 
     getimg() {
-     this.imageService.getImageFiles2(3)
+     this.imageService.getImageFiles2(1)
       .subscribe((resp :IImage )=> {
 
         this.img = resp;
-        console.log(this.img);
-        this.isloaded=true;
+
+
       })
     }
+    getimg2() {
+      this.imageService.getImageFiles2(2)
+       .subscribe((resp :IImage )=> {
+
+         this.img2 = resp;
+
+
+       })
+     }
+     getimg3() {
+      this.imageService.getImageFiles2(3)
+       .subscribe((resp :IImage )=> {
+
+         this.img3 = resp;
+
+
+       })
+     }
+     getAllimg() {
+      this.imageService.getAllImages()
+       .subscribe((resp :IImage[] )=> {
+
+         this.imgArray = resp;
+         console.log(this.imgArray);
+
+
+       })
+     }
 
 
 
