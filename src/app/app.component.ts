@@ -38,7 +38,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(){
     this.getgame();
-    this.getImage(2);
+    
 
 
   }
@@ -53,7 +53,7 @@ export class AppComponent implements OnInit {
   }
 
   getgame(){
-    this.gameService.getGame(3)
+    this.gameService.getGame(1)
     .subscribe((resp :any )=> {
       console.log(resp);
       this.game = resp;

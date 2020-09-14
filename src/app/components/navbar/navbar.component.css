@@ -6,17 +6,28 @@
 
     --MontserratFont: Montserrat-Regular;
     --font-light-color: white;
-    --font-size1: 24px;
+    --font-size1: 26px;
     --font-size2: 12px;
     --font-size3: 9px;
 
 }
 
+.navbarbackground{
+  background-color:rgb(17, 17, 17);
+}
 .title{
-  margin-top: 5px;
+ 
   color: white;
-
-  font-size: 24px;
+  font-family: var(--MontserratFont);
+ font-weight: bold;
+  font-size: 34px;
+}
+.navitem{
+  margin-right: 10px;
+  color: white;
+  font-family: cursive;
+  font-size: 22px;
+  font-style: italic;
 }
 a.nav-link .but{
   color: white;

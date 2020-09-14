@@ -1,11 +1,71 @@
-.carousel-item{
+.mainImage{
+  background-color:rgb(17, 17, 17);
+  height:700px;
+  
+}
+.carousel {
+   width:960px;
+  height:540px;
+ 
 
-  height: 100vh;
-  min-height: 300px;
+  
+
+  /*
+  position: relative;
+ 
+  top:9%;
+  left: 6.5%; */
+}
+.carouselContainer{
+  width:800px;
+  height:540px;
+  align-items: center;
+}
+.my-row2{
+  height:90px;
+/*   background-color:rgb(17, 17, 17); */
+}
+.carouselimage{
+  
+  border-radius: 6px;
+  border-color: rgb(235, 246, 255) ;
+ 
+}
+.banner{
+  /* width: 80%;
+  height:70%;
+  top:25%;
+  left: 70px; */
+  position: absolute;
+  color: #fff;
+  border-right: rgb(255, 255, 255);
+  font-family: cursive;
+  font-size: 38px;
+  font-style: italic;
+}
+/* .banner2{
+  width: 80%;
+  height:70%;
+  top:30%;
+  left: 90px;
+  position: absolute;
+  color: #fff;
+  border-right: rgb(255, 255, 255);
+  font-family: cursive;
+  font-size: 52px;
+  font-style: italic;
+
+} */
+
+ .carousel-item{
+
+ /*  height: 400px;
+  min-height: 300px; */
   background: no-repeat center center scroll;
-  -webkit-background-size: cover;
-  background-size: cover;
+   -webkit-background-size: cover;
+  background-size: cover; 
   background: rgb(17, 17, 17);
+  border-radius: 14px;
 }
 
 .carousel-caption {
@@ -16,10 +76,14 @@
   background: rgb(17, 17, 17);
   display: flex;
 
-}
+} */
 
 .cardspace{
   margin: 20px;
   background: rgb(17, 17, 17);
 }
 
+.my-row{
+  height: 1080px;
+
+}

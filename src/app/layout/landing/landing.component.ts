@@ -32,7 +32,7 @@ export class LandingComponent implements OnInit {
 
   ngOnInit()
    {
-
+    //'data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z/C/HgAGgwJ/lK3Q6wAAAABJRU5ErkJggg=='
         this.getAllimg();
 
 

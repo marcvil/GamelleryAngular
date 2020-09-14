@@ -1,4 +1,27 @@
 @font-face {
   font-family: Montserrat;
   src: url("/assets/font/Montserrat-Regular.ttf") format("truetype");
+
+
+    /*   "src/assets/fonts/fonts.css",
+              "src/assets/fonts/Merienda-Regular.tff",
+              "src/assets/fonts/Merienda-Bold.tff" */
+}
+@font-face {
+  font-family: cursive;
+  src: url("/assets/font/Merienda-Regular.ttf") format("truetype");
+
+
+    /*   "src/assets/fonts/fonts.css",
+              "src/assets/fonts/Merienda-Regular.tff",
+              "src/assets/fonts/Merienda-Bold.tff" */
+}
+@font-face {
+  font-family: cursive;
+  src: url("/assets/font/Merienda-Bold.ttf") format("truetype");
+
+
+    /*   "src/assets/fonts/fonts.css",
+              "src/assets/fonts/Merienda-Regular.tff",
+              "src/assets/fonts/Merienda-Bold.tff" */
 }
