@@ -2,8 +2,6 @@
 {
     --background-color:rgb(17, 17, 17);
 
-    --background: url('/src/assets/control.png') ;
-
     --MontserratFont: Montserrat-Regular;
     --font-light-color: white;
     --font-size1: 26px;
@@ -12,11 +10,11 @@
 
 }
 
-.navbarbackground{
+/* .navbarbackground{
   background-color:rgb(17, 17, 17);
-}
+} */
 .title{
- 
+
   color: white;
   font-family: var(--MontserratFont);
  font-weight: bold;

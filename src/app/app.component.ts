@@ -34,22 +34,11 @@ export class AppComponent implements OnInit {
 
   }
 
-
-
   ngOnInit(){
     this.getgame();
-    
 
 
-  }
 
-  getImage(id :number){
-    this.imageService.getImage(id).subscribe((blob :any )=> {
-
-
-      let objectURL = URL.createObjectURL(blob);
-      this.imagefinal = this.sanitizer.bypassSecurityTrustUrl(objectURL);
-    });
   }
 
   getgame(){
@@ -60,31 +49,9 @@ export class AppComponent implements OnInit {
     })
   }
 
-  clickFunction(){
-    this.imageService.getImage(1).subscribe((blob :any )=> {
-      console.log(blob);
-      let objectURL = URL.createObjectURL(blob);
-      this.imagefinal = this.sanitizer.bypassSecurityTrustUrl(objectURL);
-
-      }
-  )
-  }
 
 
-  clickFunctionAllImages(){
-    this.imageService.getAllImages().subscribe((blob :any )=> {
-      this.Items= JSON.parse(blob);
-      for (let i = 0; i < 3; i++){
-
-        console.log(this.Items[i] ,i);
-
-      };
-        });
-
-      };
-
-
-      }
+ }
 
 
 

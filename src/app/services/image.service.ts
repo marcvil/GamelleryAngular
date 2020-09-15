@@ -11,28 +11,12 @@ import { IImage } from '../interfaces/image';
 export class ImageService {
   constructor(private http: HttpClient,private sanitizer: DomSanitizer) { }
 
-  getImage(id :Number): Observable<Blob> {
-    return this.http.get<Blob>("https://localhost:44320/api/Images/" +id, {observe: 'body', responseType: 'blob' as 'json'})
-    };
+  getImage(id :Number) : Observable<IImage> {
 
-    getImageFile(id :Number) {
-      return this.http.get("https://localhost:44320/api/Images/" +id, { responseType: 'blob'})
-        .pipe (
-          map((blob:any) => {
-            var urlCreator = window.URL;
-            return this.sanitizer.bypassSecurityTrustUrl(urlCreator.createObjectURL(blob));
-          }
-
-          )
-        )
-      };
-
-      getImageFiles2(id :Number) : Observable<IImage> {
-
-        return this.http.get<IImage>("https://localhost:44320/api/Images/" +id);
+      return this.http.get<IImage>("https://localhost:44320/api/Images/" +id);
 
 
-        };
+   };
 
     getAllImages(): Observable<IImage[]> {
       return this.http.get<IImage[]>("https://localhost:44320/api/Images")
