@@ -16,7 +16,7 @@ import { IImage } from 'src/app/interfaces/image';
 })
 export class LandingComponent implements OnInit {
 
-
+  defaultImage = 'https://www.placecage.com/1000/1000';
   imgArray :IImage[];
 
 
@@ -29,7 +29,7 @@ export class LandingComponent implements OnInit {
   ngOnInit()
    {
 
-        this.getAllimg();
+this.getAllimg();
 
 
 
